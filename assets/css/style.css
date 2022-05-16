@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+a {
+  font-size: 1em;
+  display: inline-block;
+  margin: 25px;
+}
+.nav {
+  position: relative;
+  z-index: 5;
+}
+
+.animated {
+  animation: cubic-bezier(.47,-0.01,.19,1.55);
+  animation-name: appearing;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appearing {
+  from {
+    transform: translate(-50%, -50%) scale(.3);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
